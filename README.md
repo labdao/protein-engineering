@@ -1,5 +1,5 @@
 # fastCAR 🏎️ 
-Let's build open source tools to generate CAR constructs.
+Let's build open source tools to generate protein binders for CAR constructs. Open tools accelerate progress.
 
 ## Problem
 Therapeutic antibodies, ADCs, BITEs, DARPINs, and CAR-based therapeutics are promising platform technologies to remove antigen expressing cells within a multicellular organism. They are all united in their reliance on sufficient on-target protein-protein interactions. Applications for these therapeutics can range from oncology to chronic diseases (senolytics). 
@@ -79,7 +79,11 @@ transfect with
 
 - check CAR backbone with MIT or openMTA license? - Corina
     - addgene
-    
+ 
+![image](https://user-images.githubusercontent.com/18559148/156846602-273640de-2bca-4df0-93fa-6e127efdc209.png)
+
+![image](https://user-images.githubusercontent.com/18559148/156846528-ae6e7ff8-c8c9-497d-94d4-9997a88c150b.png)
+
 
 ## pooled → potentially also in array format with multiple T-cells and cell lines
 
