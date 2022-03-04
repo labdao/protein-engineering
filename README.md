@@ -1,5 +1,5 @@
 # fastCAR 🏎️ 
-Let's build open source tools to generate protein binders for CAR constructs. Open tools accelerate progress.
+Open tools accelerate progress. Let's build open source tools to generate protein binders for CAR constructs. 
 
 ## Problem
 Therapeutic antibodies, ADCs, BITEs, DARPINs, and CAR-based therapeutics are promising platform technologies to remove antigen expressing cells within a multicellular organism. They are all united in their reliance on sufficient on-target protein-protein interactions. Applications for these therapeutics can range from oncology to chronic diseases (senolytics). 
@@ -10,115 +10,33 @@ We will start by developing a set of [senolytic CAR-T](https://www.nature.com/ar
 
 ## Technology
 The tools we plan to develop cover a series of steps: 
-1. identify datasets including gene expression information for senescent cells. 
-2. 
-    1. senescence: decide criteria (upregulated in specific senescent settings or more universal?)
-        1. Compile available datasets of different triggers of senescence  → a list of PMID - Corina
-            1. papers
-            2. tabula muris senis - actually not that great
-        2. [refine.bio](http://refine.bio) → a table with n PMID rows x k genes - Niklas
-            1. input: paper reference
-            2. output: RNA-Seq count
-        3. Filter out potential toxic candidates: human protein atlas and human proteome map
-            1. [refine.bio](http://refine.bio) - compare expression of genes from paper with healthy human tissue
-        4. test: 
-            1. uPAR
-            2. SAbGAL
-            3. CDNK2A
-            4. 
-            - [[A2M]] macroglobulin goes up
-            - [[CDKN1A]] up
-            - [[CCND2]] up
-            - [[LCAT]] up
-            - [[MMP3]] up
-2. identify expressed surface antigens in target cell state.
-    1. uPAR
-        1. surfaceome filter - job#1
-            1. genecards: criterium > 5
-            
-            ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4469558f-b9a3-4b08-80c5-b4f939f2f004/Untitled.png)
-            
-            1. other tools? 
-        2. expression intensity
-            1. fold change relative to all transcripts in refine.bio
-        3. expression robustness
-            1. moderated t-test DGE vs. background expression cohort
-3. identify binders for antigens based on existing data → CDR1, CDR2, CD3 sequence
-    1. patents - job#2
-        1. ABCD ExPasy - [https://academic.oup.com/nar/article/48/D1/D261/5549708](https://academic.oup.com/nar/article/48/D1/D261/5549708)
-            1. 
-        2. NLP for patent search - gene name & amino acid sequence
-        3. [https://www.lens.org/](https://www.lens.org/)
-            1. search for sequence of target protein
-                1. [https://about.lens.org/patseq-bulk-download-tou/](https://about.lens.org/patseq-bulk-download-tou/)
-                2. [https://www.lens.org/lens/bio/patseqfinder](https://www.lens.org/lens/bio/patseqfinder)
-            2. search for gene name
-    2. commercial vendors
-        1. abgene
-4. avoid patent coverage (important)
-    1. alphafold based estimation of 3D conformation - naturalantibodies.com
-5. induce variation into the binders (nice to have)
-    1. stability & multimerization
-    2. titrate binding affinity
-        1. titrate binding affinity with alphafold + KDdock
-6. clone constructs → CAR construct lentivirus? retrovirus?
-    1. scFv - binder
-        1. heavy chain CDR1, CDR2, CDR3
-        2. Glycin- linker length
-            1. length
-        3. light chain CDR1, CDR2, CDR3
-    2. activation domain
-        1. 41BB 
-        
-7. cloning - hand off to wet-lab (London Biofoundry - golden gate as a service?)
-    1. order gBLOCK from IDT 
-    2. golden gate assembly with primers/short gBLOCKS?
-8. fastCAR pooled testing - real project on its own - method in Amor lab? 
 
-transfect with
+## In-Silico pipeline with 7 APIs
+1. identify datasets including gene expression information of cells in a senescent state. 
+2. compile standardized RNA-Seq information from these data using open tools, e.g. [refine.bio](http://refine.bio).
+3. perform differential gene expression analysis between senescent cells and the overall distribution of gene expression seen in healthy human tissue.
+4. identify differentially expressed genes that are expressed on the cell surface.
+5. identify binders (e.g. antibodies) for antigens based on existing data
+6. introduce diversity to avoid patent infringement
+7. in-silico clone CAR construct plasmids for viral delivery
 
-- check CAR backbone with MIT or openMTA license? - Corina
-    - addgene
- 
-![image](https://user-images.githubusercontent.com/18559148/156846602-273640de-2bca-4df0-93fa-6e127efdc209.png)
+## fastCAR Pooled Screening of constructs
+1. clone a library of CAR constructs into an openMIT licensed backbone
+2. transfect a library of CAR constructs with viral donor plasmid into HEK293T cell pool
+3. collect virus and ensure titration with MOI enabling high probability of single-construct effected cells
+4. infect prepared T-cells and expose to senecent cell pool and non-senecent cell pool
+5. co-culture cells for t hours
+6. collect T-cells from both flasks and perform FACS multiplex sorting of activity markers, incl. CD69
+7. collect activated T-cells and perform amplicon sequncing of CAR construct flanking barcodes
+8. use methods related to MAGEKVispr to identify CAR constructs with different abundance levels
 
-![image](https://user-images.githubusercontent.com/18559148/156846528-ae6e7ff8-c8c9-497d-94d4-9997a88c150b.png)
+The top hits are likely constructs that induce an activated state when T-cells are engaging with senescent cells.
 
-![image](https://user-images.githubusercontent.com/18559148/156846749-fd110b42-ffa4-4de1-ab04-c97a208c17c5.png)
-
-
-
-## pooled → potentially also in array format with multiple T-cells and cell lines
-
-Kole Roybal? 
-
-multiplex sort incl CD69
-
-target cells 
-
-no target cells
-
-MAGEKVISPR - differential abundance of CAR constructs
-
-next steps 
-
+## next steps post-project
 - validation in-vitro
 - validation in-vivo
     - persistence
-
-1. test binder affinity
-2. generate constructs for production: creation of basic “universal” CAR constructs.
-3. produce high titer virus for T-cell transduction:
-    1. measure cytokine expression
-    2. measure in vitro cytotoxicity
-
-CAR Pools - UCSF
-
-FACS sorting of activity markers and then amplicon sequncing
-
-permute antibody sequences
-
-generate antibody from scratch
+- protection of generated IP and open source licensing of tools that generated the IP.
 
 ## Team (alphabetical)
 * [Corina Amor Vegas](https://twitter.com/corina_amor_MD)
