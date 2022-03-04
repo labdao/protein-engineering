@@ -10,8 +10,8 @@ We will start by developing a set of [senolytic CAR-T](https://www.nature.com/ar
 
 ## Technology
 The tools we plan to develop cover a series of steps: 
-
-1. identify target cell state from multiple public sources
+1. identify datasets including gene expression information for senescent cells. 
+2. 
     1. senescence: decide criteria (upregulated in specific senescent settings or more universal?)
         1. Compile available datasets of different triggers of senescence  → a list of PMID - Corina
             1. papers
@@ -83,6 +83,9 @@ transfect with
 ![image](https://user-images.githubusercontent.com/18559148/156846602-273640de-2bca-4df0-93fa-6e127efdc209.png)
 
 ![image](https://user-images.githubusercontent.com/18559148/156846528-ae6e7ff8-c8c9-497d-94d4-9997a88c150b.png)
+
+![image](https://user-images.githubusercontent.com/18559148/156846749-fd110b42-ffa4-4de1-ab04-c97a208c17c5.png)
+
 
 
 ## pooled → potentially also in array format with multiple T-cells and cell lines
