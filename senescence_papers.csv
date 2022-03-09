@@ -1,3 +1,4 @@
 pubmed_id, title, organism, type, method_of_induction, method_of_rna-seq, bulk, github_username, wallet_address
 31251810, Transcriptome signature of cellular senescence, Homo Sapiens, In vivo, Proliferation Doxorubicin Ionizing Radiation Oncogene-induced, Illumina, TRUE, tohrnii, NULL
 27630559, Changes in the Transcriptome of Human Astrocytes Accompanying Oxidative Stress-Induced Senescence, Homo Sapiens, In vitro, Oxidative stress, Illumina, TRUE, tohrnii, NULL
+29138277, Coupling shRNA screens with single-cell RNA-seq identifies a dual role for mTOR in reprogramming-induced senescence, Homo Sapiens, In vitro, Reprogramming factors(OSKM) induced, Illumina, FALSE, tohrnii, NULL
