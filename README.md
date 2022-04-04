@@ -1,12 +1,13 @@
-# fastCAR 🏎️ 
-Open tools accelerate progress. Let's build open source tools to generate protein binders for CAR constructs. 
+# Protein Engineering
+Let's build open source tools to generate protein binders.
 
 ## Problem
-Therapeutic antibodies, ADCs, BITEs, DARPINs, and CAR-based therapeutics are promising platform technologies to remove antigen expressing cells within a multicellular organism. They are all united in their reliance on sufficient on-target protein-protein interactions. Applications for these therapeutics can range from oncology to chronic diseases (senolytics). 
+Therapeutic antibodies, ADCs, BITEs, DARPINs, and CAR-based therapeutics are platform technologies to target antigen expressing cells within a multicellular organism. These platforms are all united in their reliance on sufficient on-target protein-protein interactions.
 
 ## Solution
-Develop a toolset of open-source computational tools and data that can be used to generate candidate constructs, such as CAR plasmids for in-vitro testing. These tools will be hosted as executable APIs using the openlab protocol.
-We will start by developing a set of [senolytic CAR-T](https://www.nature.com/articles/s41586-020-2403-9) constructs. 
+We aim to develop a series of open-source computational tools and data that can be used to generate candidate protein binding constructs, for in-vitro binding affinity testing. These tools will be hosted as executable APIs using the openlab exchange.
+
+We will start by developing a binder targeting the surface protein uPAR. This target is relevant for the development of [senolytic CAR-T](https://www.nature.com/articles/s41586-020-2403-9) constructs.
 
 ## Technology
 [DLAB](https://github.com/oxpig/dlab-public)
