@@ -4,21 +4,17 @@ Let's build open tools to generate protein binders at scale.
 ## Problem
 Therapeutic [antibodies](https://en.wikipedia.org/wiki/Monoclonal_antibody), [ADCs](https://www.nature.com/articles/s41571-021-00470-8), [BITEs](https://en.wikipedia.org/wiki/Bi-specific_T-cell_engager), [DARPins](https://en.wikipedia.org/wiki/DARPin), and [CAR](https://en.wikipedia.org/wiki/Chimeric_antigen_receptor_T_cell)-based therapeutics are platform technologies that are giving rise to an increasing number of modern (and very expensive) medicines. These platforms are all united by the fact that an engineered protein needs to bind tightly to a target protein associated with a disease. This type of protein engineering is a minimization task: The input is the 3D structure (a .pdb file) of a target protein and the goal is to find the sequence of amino acids that code for a protein, referred to as a binder, that binds tightly to the target.
 
-Despite the great overall potential of protein binders, the tools used to design these therapeutics are expensive and inaccessible. For example, most [display](https://en.wikipedia.org/wiki/Yeast_display#:~:text=Yeast%20display%20(or%20yeast%20surface,for%20isolating%20and%20engineering%20antibodies.) methods take multiple weeks to generate promising antibody candidates and tools for computational protein design are pubblished by academic scientists without a further incentive to make the tool run at production-grade scale. 
+Despite the great overall potential of protein binders, the tools used to design these therapeutics are expensive and inaccessible. For example, most [display](https://en.wikipedia.org/wiki/Yeast_display) methods take multiple weeks to generate promising antibody candidates and tools for computational protein design are pubblished by academic scientists without a further incentive to make the tool run at production-grade scale. 
 
 A particularly interesting use-case for protein binders as therapeutics against aging related diseases, is the clearance of senescent cells from the human body by senolytic cell therapies. Previous work by [Amor et al.](https://www.nature.com/articles/s41586-020-2403-9), demonstrated that senescent cells can be effectively cleared from the body using CAR-T cells targeting the surface protein encoded by the [PLAUR](https://www.genecards.org/cgi-bin/carddisp.pl?gene=PLAUR) gene. While most CAR-T cells are based on scFv binders, prior studies have demonstrated that computationally more tractable [DARPin](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4678647) binders can also be used for cell therapies.
 
 ## Solution
-We aim to develop a series of computational tools enabling the easy generation of candidate protein binders, ready for in-vitro affinity testing and refinement. These tools will be hosted as executable APIs ontop the openlab exchange.
+We aim to develop a series of computational tools enabling the easy generation of candidate protein binders, ready for in-vitro affinity testing and refinement. These tools will be hosted as executable APIs ontop the lab-exchange.
 
 In detail, the tools we will develop comprise a 
-
-Generation of proposed constructs 
-Planning of construct generation 
-target binding affinity estimation
-
-## Application 
-removing senescent cells from human tissue. A target robustly expressed on the cell surface of 
+* Generation of proposed constructs 
+* Planning of protein generation, including cloning strategy
+* Target binding affinity estimation
 
 
 ## Protein Representation learning infrastructure 
@@ -60,23 +56,15 @@ https://gitlab.com/ostrokach/proteinsolver
 * computational biologist
 
 ## Financials
-100k USDC from VitaDAO 
-* stipends for full-time supporters are planned
-* fractional ownership of resulting IP-NFT
+
 
 ## Literature
 ### Protein binder design
 * [Design of protein binding proteins from target structure alone (Mar 2022)](https://doi.org/10.1038/s41586-022-04654-9)
 * [De novo design of picomolar SARS-CoV-2 miniprotein inhibitors (Oct 2020)](https://doi.org/10.1126/science.abd9909)
-* 
+* [IG-VAE: generative modeling of protein structure by direct 3D coordinate generation (Feb 2022)](https://www.biorxiv.org/content/10.1101/2020.08.07.242347v2.full.pdf)
 
 ### Binder refinement
-### unsorted Reading
-* [notion](https://www.notion.so/67a570bc9a97434f8126d06522709f9d) 
-* [DARPIN based cell therapy](https://pubmed.ncbi.nlm.nih.gov/31548346/)
-
-
-Literature: Protein Binders
 
 
 
@@ -106,7 +94,15 @@ RIFdock
 https://github.com/rifdock/rifdock
 https://doi.org/10.1038/s41586-018-0509-0
 
+Openfold
 
 
 
 https://twitter.com/Romeritos/status/1512007307655266312
+
+### unsorted Reading
+* [notion](https://www.notion.so/67a570bc9a97434f8126d06522709f9d) 
+* [DARPIN based cell therapy](https://pubmed.ncbi.nlm.nih.gov/31548346/)
+
+
+Literature: Protein Binders
