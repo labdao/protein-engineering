@@ -46,7 +46,7 @@ https://gitlab.com/ostrokach/proteinsolver
 * [Corina Amor Vegas](https://twitter.com/corina_amor_MD)
 * [Finsam Samson](https://twitter.com/FinsamSamson)
 * [Leo Chicaybam](https://twitter.com/leochicaybam)
-* Mahdi
+* [Mahdi Chaker](https://twitter.com/MahdiMC)
 * [Niklas Rindtorff](https://twitter.com/Niklas_TR)
 * [Stanley Bishop](https://twitter.com/ScienceStanley)
 
